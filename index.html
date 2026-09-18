@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="img/flowers.png" type="image/x-icon" />
-  <title>Para Juana 🌻</title>
+  <title>Para Junela 🌻</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +27,6 @@
       font-family: 'Cormorant Garamond', serif;
     }
 
-    /* ============================================================
-       DEDICATORIA FIJA ARRIBA (no tapa las flores)
-       ============================================================ */
     #dedication {
       position: fixed;
       top: 22px;
@@ -66,9 +63,6 @@
       letter-spacing: 1px;
     }
 
-    /* ============================================================
-       LETRAS: ARRIBA, ELEGANTES, ITÁLICAS, NO TAPAN LAS FLORES
-       ============================================================ */
     #lyrics {
       position: fixed;
       top: 22vh;
@@ -92,9 +86,6 @@
       opacity: 0;
     }
 
-    /* ============================================================
-       TÍTULO / MENSAJE PRINCIPAL (bonito, abajo, no estorba)
-       ============================================================ */
     .titulo {
       position: absolute;
       bottom: 22px;
@@ -130,9 +121,6 @@
     @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
     @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
 
-    /* ============================================================
-       NOCHE DE FONDO
-       ============================================================ */
     .night {
       z-index: -1;
       position: absolute;
@@ -604,9 +592,6 @@
       animation-play-state: paused !important;
     }
 
-    /* ============================================================
-       PANTALLA DE BIENVENIDA — ELEGANTE
-       ============================================================ */
     #intro, #intro * { animation-play-state: running !important; }
 
     #intro {
@@ -630,7 +615,6 @@
     }
     #intro.oculto { opacity: 0; visibility: hidden; pointer-events: none; }
 
-    /* Estrellitas decorativas */
     #intro::before,
     #intro::after {
       content: "";
@@ -770,13 +754,10 @@
 
 <body class="container">
 
-  <!-- ============================================================
-       PANTALLA DE BIENVENIDA
-       ============================================================ -->
   <div id="intro">
     <p class="eyebrow">21 de Septiembre · Flores Amarillas</p>
 
-    <h1 class="para-nombre">Para Juana Soto</h1>
+    <h1 class="para-nombre">Para Junela Soto</h1>
 
     <div class="linea"></div>
 
@@ -792,37 +773,22 @@
     <button class="botones" id="btn-entrar">Abrir flores 🌻</button>
   </div>
 
-  <!-- ============================================================
-       AUDIO
-       ============================================================ -->
   <audio id="audio" src="sound/ChristianBasso&HaienQiu-Flowers.mp3" preload="auto"></audio>
 
-  <!-- ============================================================
-       DEDICATORIA FIJA ARRIBA
-       ============================================================ -->
   <div id="dedication">
     <p class="para">Dedicatoria especial</p>
-    <p class="nombre">Juana Soto</p>
+    <p class="nombre">Junela Soto</p>
     <p class="de">— de Kevin 🌻</p>
   </div>
 
-  <!-- ============================================================
-       LETRAS (arriba, elegantes)
-       ============================================================ -->
   <div id="lyrics"></div>
 
-  <!-- ============================================================
-       MENSAJE PRINCIPAL (abajo, sobre las flores)
-       ============================================================ -->
   <p class="titulo">
     Estas flores amarillas son un reflejo de la alegría que traes a mi vida.<br>
     Gracias por iluminar mis días con tu presencia.
     <span class="firma">Con cariño, Kevin</span>
   </p>
 
-  <!-- ============================================================
-       NOCHE Y FLORES
-       ============================================================ -->
   <div class="night"></div>
 
   <div class="flowers">
@@ -1028,9 +994,6 @@
     var audio  = document.getElementById("audio");
     var lyrics = document.getElementById("lyrics");
 
-    /* ============================================================
-       LETRAS (arriba, elegantes)
-       ============================================================ */
     var lyricsData = [
       { text: "At the time",                          time: 15  },
       { text: "The whisper of birds",                 time: 18  },
@@ -1099,7 +1062,6 @@
     }
     requestAnimationFrame(updateLyrics);
 
-    /* Ocultar el mensaje principal a los 216 s (después del "Love") */
     function ocultarTitulo() {
       var titulo = document.querySelector(".titulo");
       if (!titulo) return;
@@ -1107,9 +1069,6 @@
       setTimeout(function () { titulo.style.display = "none"; }, 3000);
     }
 
-    /* ============================================================
-       BOTÓN DE INICIO
-       ============================================================ */
     var intro = document.getElementById("intro");
     var btn   = document.getElementById("btn-entrar");
 
